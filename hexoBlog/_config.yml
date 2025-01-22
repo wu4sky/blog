@@ -3,31 +3,38 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: 灯火&扁舟
+subtitle: '吾的小记'
+description: 乄的日记
+keywords: 乄
+author: 吾
+language: zh-CN
+#language: en
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://wu4sky.github.io/
+#url: http://example.com
 permalink: :year/:month/:day/:title/
+#permalink: :year/:month/:day/:title/:name/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
+#Source 文件夹 存储内容的位置`
 source_dir: source
+#Public 文件夹 生成静态站点的位置
 public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
+#Include code 文件夹，source_dir 下的子目录
 code_dir: downloads/code
 i18n_dir: :lang
+#匹配到的文件将会被不做改动地复制到 public 目录中。 您可使用 glob 表达式来匹配路径。 https://hexo.io/zh-cn/docs/configuration
 skip_render:
 
 # Writing
@@ -42,8 +49,10 @@ filename_case: 0
 render_drafts: false
 #  请求资产文件夹 md - typora 文件图片路径
 post_asset_folder: true
-relative_link: false
+#把链接改为与根目录的相对位址
+relative_link: true
 future: true
+#高亮 https://hexo.io/zh-cn/docs/configuration
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
@@ -64,6 +73,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
+  pagination_dir: page
 
 # Category & Tag
 default_category: uncategorized
@@ -102,6 +112,8 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  repo: ''
+  type: git
+  #repo: https://github.com/wu4sky/wu4sky.github.io
+  repo: https://github.com/wu4sky/wu4sky.github.io.git
   branch: main
+  message: 'hexo 更新'
