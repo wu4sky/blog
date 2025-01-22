@@ -49,8 +49,12 @@ filename_case: 0
 render_drafts: false
 #  请求资产文件夹 md - typora 文件图片路径
 post_asset_folder: true
+#使用 Markdown 嵌入图片
+marked:
+  prependRoot: true
+  postAsset: true
 #把链接改为与根目录的相对位址
-relative_link: true
+relative_link: false
 future: true
 #高亮 https://hexo.io/zh-cn/docs/configuration
 syntax_highlighter: highlight.js
