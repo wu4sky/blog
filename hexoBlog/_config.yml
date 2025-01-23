@@ -111,7 +111,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+#主题
+#theme: landscape
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -129,14 +131,14 @@ search:
   field: all
   #是否包含每篇文章的全文
   content: true
-  template: ./search.xml
+  # template: ./search.xml
   format: html
 # search:
 #   path: search.xml
 #   #path:</
 #   field: post
 #   format: html
-#   limit: 10000
+  limit: 10000
 #   placeholder: Search
 
 
