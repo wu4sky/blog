@@ -121,3 +121,22 @@ deploy:
   repo: https://github.com/wu4sky/wu4sky.github.io.git
   branch: main
   message: 'hexo 更新'
+#搜索功能
+search:
+  path: search.xml
+  # field: post
+  # field: page
+  field: all
+  #是否包含每篇文章的全文
+  content: true
+  template: ./search.xml
+  format: html
+# search:
+#   path: search.xml
+#   #path:</
+#   field: post
+#   format: html
+#   limit: 10000
+#   placeholder: Search
+
+
