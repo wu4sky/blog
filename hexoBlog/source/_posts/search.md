@@ -1,9 +1,10 @@
 ---
-title: search
+title: search搜索
 date: 2025-01-23 13:04:22
 updated: 2025-01-23 13:04:22
-tags:
-categories:
+tags: 查询
+categories: 博客
+description: fluid主题下的搜索功能
 ---
 
 本地搜索功能

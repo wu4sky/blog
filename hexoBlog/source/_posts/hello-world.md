@@ -1,6 +1,9 @@
 ---
 title: Hello World
 date: 24年11月28日
+tags: hexo
+categories: hexo
+description: "hexo博客使用"
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 欢迎来到 Hexo！这是您的第一篇文章。查看文档以获取更多信息。如果你在使用 Hexo 时遇到任何问题，你可以在 故障排除 中找到答案，也可以在 GitHub 上问我。
@@ -40,3 +43,5 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+
+## hexo 项目搭建

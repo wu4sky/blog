@@ -2,8 +2,9 @@
 title: ssh密钥
 date: 2025-01-22 15:41:57
 updated: 2025-01-22 15:41:57
-tags:
-categories:
+tags: ssh密钥
+categories: 密钥
+description: ssh密钥生成及配置
 ---
 github-ssh
 

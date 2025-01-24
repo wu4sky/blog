@@ -446,6 +446,11 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
+    <div style="margin-top:100px">
+      <a href="https://wu4sky.github.io/" target="_blank" rel="nofollow noopener"><span>午夜</span></a>
+      <i class="iconfont icon-love"></i>
+      <span>
+    </div>
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
@@ -749,11 +754,14 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    # enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: disqus
+    type: giscus
+    # type: disqus
+
 
 
 #---------------------------
@@ -763,6 +771,26 @@ post:
 # 开启评论需要先设置上方 `post: comments: enable: true`，然后根据 `type` 设置下方对应的评论插件参数
 # Enable comments need to be set `post: comments: enable: true`, then set the corresponding comment plugin parameters below according to `type`
 #---------------------------
+
+# 自定义底部 HTML 内容（位于 footer 上方），也可用于外部引入 js css 这些操作，注意不要和 post.custom 配置冲突
+#gis评论
+custom_html: '<script src="https://giscus.app/client.js"
+        data-repo="wu4sky/comment-giscus"
+        data-repo-id="R_kgDONu91mg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDONu91ms4CmTcL"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>'
+
+
 
 # Utterances
 # 基于 GitHub Issues
@@ -889,22 +917,65 @@ cusdis:
   app_id:
   lang: zh-cn
 
-# Giscus
+# Giscus 评论
 # 基于 GitHub Discussions，类似于 Utterances
 # Based on GitHub Discussions, similar to Utterances
-# See: https://giscus.app/
+# See: https://giscus.app/   https://giscus.app/zh-CN
+# 链接安装 https://github.com/apps/giscus
+#生成giscus配置代码  https://giscus.app/zh-CN
+# 参考 https://github.com/giscus/giscus/blob/main/SELF-HOSTING.md  https://giscus.app/zh-CN
+# https://docs.github.com/zh/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository
+# https://github.com/giscus/giscus/blob/main/SELF-HOSTING.md  https://giscus.app/zh-CN
+# https://github.com/settings/apps/new
 giscus:
-  repo:
-  repo-id:
-  category:
-  category-id:
+  enable: true
+  repo: wu4sky/comment-giscus
+  repo-id: R_kgDONu91mg
+  category: Announcements
+  category-id: DIC_kwDONu91ms4CmTcL
+  # light | dark | dark_high_cotrast | transparent_dark | preferred-color-dcheme
   theme-light: light
   theme-dark: dark
+  # pathname | url | title | og:title
   mapping: pathname
+  # 0 | 1
   reactions-enabled: 1
+  # 0 | 1
   emit-metadata: 0
   input-position: top
+  # en | zh-CN
   lang: zh-CN
+
+# giscus:
+#   repo:
+#   repo-id:
+#   category:
+#   category-id:
+#   theme-light: light
+#   theme-dark: dark
+#   mapping: pathname
+#   reactions-enabled: 1
+#   emit-metadata: 0
+#   input-position: top
+#   lang: zh-CN
+
+#---------------
+# <script src="https://giscus.app/client.js"
+#         data-repo="wu4sky/comment-giscus"
+#         data-repo-id="R_kgDONu91mg"
+#         data-category="Announcements"
+#         data-category-id="DIC_kwDONu91ms4CmTcL"
+#         data-mapping="pathname"
+#         data-strict="0"
+#         data-reactions-enabled="1"
+#         data-emit-metadata="0"
+#         data-input-position="bottom"
+#         data-theme="preferred_color_scheme"
+#         data-lang="zh-CN"
+#         crossorigin="anonymous"
+#         async>
+# </script>
+#---------------
 
 # Discuss
 # 多平台、多数据库、自托管、免费开源评论系统
