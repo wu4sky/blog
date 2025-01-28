@@ -17,6 +17,9 @@ updated: 2025-01-28 01:05:06
 ###### 2.全局包含的插件
 ``` yaml
  npm list -g --depth=0
+ npm list -g hexo-cli
+ npm list hexo-cli
+ npx hexo --version
 ```
 ###### 3.安装插件到当前项目
 ``` yaml
@@ -25,6 +28,8 @@ updated: 2025-01-28 01:05:06
 ###### 4.安装插件到全局
 ``` yaml
  npm install -g electron-builder
+ 指定版本:
+ npm i -g hexo-cli@4.3.2
 ```
 ###### 5.卸载当前项目插件
 ``` yaml
@@ -91,6 +96,20 @@ npm run build -- -mwl
 具体格式:
 npm run build -- -mwl dmg nsis AppImage
 ```
+### git配置 
+``` yaml
+查询全局config信息:
+git config --global --list
+设置config配置:
+git config --global user.email "you@example.com"
+git config --global user.name "you"
+```
+
+
+
+
+
+
 ### 其他
 
 [package.json配置信息](https://www.jianshu.com/p/15e5ac3e78ca?v=1731982940748)
