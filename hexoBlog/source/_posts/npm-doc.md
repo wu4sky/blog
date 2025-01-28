@@ -103,6 +103,10 @@ git config --global --list
 设置config配置:
 git config --global user.email "you@example.com"
 git config --global user.name "you"
+
+npm config list
+npm config set python python2
+npm config get python
 ```
 
 
