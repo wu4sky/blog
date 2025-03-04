@@ -120,7 +120,8 @@ theme: fluid
 deploy:
   type: git
   #repo: https://github.com/wu4sky/wu4sky.github.io
-  repo: https://github.com/wu4sky/wu4sky.github.io.git
+  # repo: https://github.com/wu4sky/wu4sky.github.io.git
+  repo: git@github.com:wu4sky/wu4sky.github.io.git
   branch: main
   message: 'hexo 更新'
 #搜索功能
