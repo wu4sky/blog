@@ -21,6 +21,8 @@ updated: 2025-03-04 09:28:07
 
 ![image-20250304094801514](../amb-project-init-idea/image-20250304094801514.png)
 
+![image-20250322142523972](../amb-project-init-idea/image-20250322142523972.png)
+
 
 
 2、项目配置

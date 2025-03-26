@@ -8,10 +8,11 @@ description: ssh密钥生成及配置
 ---
 github-ssh
 
-1.创建ssh密钥文件
+### 1.创建ssh密钥文件
 
 或 ssh-keygen -t rsa -b 4096 -C "完整的邮箱地址" -f \~/.ssh/id_rsa_ambition
 
+ 	指定保存位置：
  	ssh-keygen -t rsa -b 4096 -C "完整的邮箱地址" -f C:\Users\ambition\.ssh\id_rsa_ambition
 
 ssh-keygen -t rsa -C "GitHub邮箱" ,三此确认
@@ -22,7 +23,7 @@ ssh-keygen -t rsa -C "GitHub邮箱" ,三此确认
 
 ![image-20250123112938413](../github-ssh/image-20250123112938413.png)
 
-2.获取公用密码上传github
+### 2.获取公用密码上传github
 
 径 C:\Users${name}/.ssh/id_rsa.pub，并用记事本打开，将内容复制
 
@@ -48,7 +49,7 @@ ssh -i C:\Users\<YourUsername>\.ssh\id_rsa_ambition git@git.ambition-soft.com
 
 
 
-多个秘钥
+### 多个秘钥
 
 创建 config文件
 
@@ -77,6 +78,46 @@ Host github.com
   User git
   IdentityFile ~/.ssh/id_rsa
   IdentitiesOnly yes
+
+
+
+~~~
+# Host git.xxx.cn
+#     HostName git.xxx.cn
+#     User git
+#     IdentityFile ~/.ssh/对应私有密钥
+#     IdentitiesOnly yes
+
+# 配置 git.ambition-soft.com ssh -T git@git.ambition-soft.com
+Host git.ambition-soft.com
+  HostName git.ambition-soft.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_ambition
+  IdentitiesOnly yes
+
+
+
+# 配置 git@github.com ssh -T git@github.com
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
+
+
+~~~
+
+
+
+
+
+#### 其他的密钥生成类型
+
+#### Ed25519
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+[参考gitee的ssh](https://help.gitee.com/base/account/SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE)
 
 
 
